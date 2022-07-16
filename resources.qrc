@@ -1,0 +1,40 @@
+<RCC>
+    <qresource prefix="/">
+        <file>imgs/backward.png</file>
+        <file>imgs/backward_clicked.png</file>
+        <file>imgs/forward.png</file>
+        <file>imgs/forward_clicked.png</file>
+        <file>imgs/origin.png</file>
+        <file>imgs/origin_clicked.png</file>
+        <file>imgs/press.png</file>
+        <file>imgs/press_clicked.png</file>
+        <file>imgs/screen.png</file>
+        <file>imgs/screen_clicked.png</file>
+        <file>imgs/serial.png</file>
+        <file>imgs/serial_clicked.png</file>
+        <file>imgs/serial_opened.png</file>
+        <file>imgs/shiftforward.png</file>
+        <file>imgs/shiftforward_clicked.png</file>
+        <file>imgs/shiftleft.png</file>
+        <file>imgs/shiftleft_clicked.png</file>
+        <file>imgs/shiftright.png</file>
+        <file>imgs/shiftright_clicked.png</file>
+        <file>imgs/turnleft.png</file>
+        <file>imgs/turnleft_clicked.png</file>
+        <file>imgs/turnright.png</file>
+        <file>imgs/turnright_clicked.png</file>
+        <file>imgs/video.png</file>
+        <file>imgs/video_clicked.png</file>
+        <file>imgs/video_opened.png</file>
+        <file>qss/style.qss</file>
+        <file>imgs/power.png</file>
+        <file>imgs/power_low.png</file>
+        <file>imgs/offline.png</file>
+        <file>imgs/online.png</file>
+        <file>imgs/record.png</file>
+        <file>imgs/record_clicked.png</file>
+        <file>imgs/recording.png</file>
+        <file>imgs/down.png</file>
+        <file>imgs/down_clicked.png</file>
+    </qresource>
+</RCC>
