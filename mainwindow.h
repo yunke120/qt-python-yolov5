@@ -4,8 +4,6 @@
 #include <QMainWindow>
 #include <QTimer>
 #include <QStringList>
-#include <QSerialPort>
-#include <QSerialPortInfo>
 #include <QPixmap>
 #include <QDateTime>
 #include <QPushButton>

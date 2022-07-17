@@ -17,15 +17,13 @@ DetectImage::DetectImage()
 
 int DetectImage::pythonInit(const char *module_name, const char *class_name)
 {
-    // 设置 python 环境目录
-    Py_SetPythonHome(reinterpret_cast<const wchar_t*>(L"G:\\RJAZ\\Miniconnda\\data"));
+    Py_SetPythonHome(reinterpret_cast<const wchar_t*>(L"G:\\RJAZ\\Miniconnda\\data")); // 设置 python 环境目录
     Py_Initialize(); // 初始化
     if(!Py_IsInitialized())   return -1;
 
     PyRun_SimpleString("import sys");                             // 加载 sys 模块
     PyRun_SimpleString("sys.path.append('/')");                   // 设置 python 文件搜索路径
-//    PyRun_SimpleString("sys.path.append('H:/robot_plus/camera/Substation-Robot/substation-robot-dev/bin/meter')"); // 设置 python 文件搜索路径
-    PyRun_SimpleString("sys.path.append('./meter')");
+    PyRun_SimpleString("sys.path.append('./yolov5')");            // 将算法添加进python搜索路径
 
     PyObject *pModule = PyImport_ImportModule(module_name);       // 调用的文件名
     if(!pModule)
@@ -156,7 +154,7 @@ int DetectImage::detectImageEx3(const char *fun, Mat srcImg, ROI_FRAME &roiFrame
 
 void DetectImage::run()
 {
-    int ret = pythonInit("yolov5.temp", "YoloV5");
+    int ret = pythonInit("yolov5.temp", "YoloV5"); /* python算法初始化，模块为temp.py,类名为YoloV5 */
     if(ret != 0)
     {
         return;
@@ -182,9 +180,9 @@ void DetectImage::run()
                 int size = videoFrameQueue.size();
                 if (size > 3) videoFrameQueue.clear(); // 针对检测速度较慢的算法，通过对消息队列进行定时清理，以达到实时检测效果
                 videoMutex.unlock();
-//                qDebug() << "video:" << size;
+
                 ROI_FRAME dstFrame;
-                ret = detectImageEx3("detect", srcFrame, dstFrame);
+                ret = detectImageEx3("detect", srcFrame, dstFrame); /* 调用类中的检测函数derect */
                 if(ret != 0)
                 {
 
