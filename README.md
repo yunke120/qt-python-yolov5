@@ -29,3 +29,55 @@
 ```
 git clone https://gitee.com/yunke120/qt-python-yolov5.git
 ```
+
+## 使用方式
+
+### 文件结构
+
+```
+.
+├── bin/               /* release 目录 */
+├── detectimage.cpp    /* 检测图片线程源文件 */ 
+├── detectimage.h      /* 检测图片线程头文件 */
+├── inc/               /* 外部头文件 */
+├── libs/              /* 外部库文件 */
+├── main.cpp           /* 启动入口 */
+├── mainwindow.cpp     /* 主线程源文件 */
+├── mainwindow.h       /* 主线程（GUI）头文件 */
+├── mainwindow.ui      /* UI文件 */
+├── paintlabel.cpp     /* 重写QLabel源文件 */
+├── paintlabel.h       /* 重写QLabel头文件 */
+├── README.md          /* 说明 */
+├── Demo.pro          /* 工程文件 */
+├── videoplayer.cpp    /* 接收视频线程源文件 */
+└── videoplayer.h      /* 接收视频线程头文件 */
+```
+
+```
+/bin文件结构：
+├── opencv_videoio_ffmpeg452_64.dll /* 所需动态库 */
+├── opencv_world452.dll
+├── openh264-1.8.0-win64.dll
+├── python38.dll
+├── python3.dll
+├── Demo.exe                       
+└── yolov5/                         /* 你的算法 */
+```
+
+​		在运行此程序之前，需要完成以下几步：
+
+​		1. 请确保您的`Python`算法能够单独运行，这是为了确保能够成功调用`Python`算法。
+
+​		以`YoloV5`为例，打开`yolov5`文件夹，运行
+
+```
+python detect.py --weights yolov5s.pt --source data/images/bus.jpg
+```
+
+​		运行成功即可。
+
+![1658030901940](figures/1658030901940.png)
+
+  2. 修改目录`bin`、`libs`、`inc`下的`python`相关文件。这些文件需要与你在步骤1中使用的`Python`环境对应，查看当前`Python`安装目录，执行命令`where python`。
+
+     ![1658032061632](figures/1658032061632.png)
