@@ -1,4 +1,4 @@
-# QT_YoloV5_Demo
+# QT&Python视频检测
 
 ## 目录
 
@@ -6,7 +6,8 @@
 2. [所需环境 Environment](https://gitee.com/yunke120/substation-robot/tree/master/#%E6%89%80%E9%9C%80%E7%8E%AF%E5%A2%83)
 3. [文件下载 Download](https://gitee.com/yunke120/substation-robot/tree/master/#%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD)
 4. [使用方式 How2use](https://gitee.com/yunke120/substation-robot/tree/master/#%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F)
-5. [参考资料 Reference](https://gitee.com/yunke120/substation-robot/tree/master/#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99)
+5. [演示视频 Demo Video](https://gitee.com/yunke120/substation-robot/tree/master/#%E6%BC%94%E7%A4%BA%E8%A7%86%E9%A2%91)
+6. [参考资料 Reference](https://gitee.com/yunke120/substation-robot/tree/master/#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99)
 
 ## Top News
 
@@ -134,13 +135,13 @@ LIBS += -L$$PWD/libs             \
 2. `PyObject_CallObject`或者`PyObject_CallMethod`这类函数返回空时，除了网上介绍的部分原因，另一方面可能是你调用的`python`方法中存在打开`open`或者加载`load`文件等一系列与文件操作有关的代码，此时需要检查你的文件路径是否正确，按照我的程序所写，这个路径需要修改为相对于你的`.exe`的路径，而不是相对于你的`python module`路径。另外，返回空还算好的，程序直接崩溃才是最惨的，如果你用到的`python`函数的返回值，再用`PyArg_Parse`进行解析时，须保证传入的参数类型与返回值类型保持一致。具体对应关系可参考[链接](https://docs.python.org/3.8/c-api/arg.html#PyArg_UnpackTuple)。
 3. 如有其它问题，可在issue中提问。
 
-## [演示视频](https://www.bilibili.com/video/BV1q34y1H76F?share_source=copy_web&vd_source=f06a9df5c06f51cc84a1106139be7062)
+## 演示视频
 
-<iframe src="//player.bilibili.com/player.html?aid=813430501&bvid=BV1q34y1H76F&cid=775333007&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+[点击](https://www.bilibili.com/video/BV1q34y1H76F?share_source=copy_web&vd_source=f06a9df5c06f51cc84a1106139be7062)跳转
 
 ## 参考资料
 
-​		`Python C-API`[文档](https://docs.python.org/3.8/c-api/arg.html#PyArg_UnpackTuple)
+​	`Python C-API`[文档](https://docs.python.org/3.8/c-api/arg.html#PyArg_UnpackTuple)
 
 
 
