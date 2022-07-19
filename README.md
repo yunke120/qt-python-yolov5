@@ -129,7 +129,7 @@ LIBS += -L$$PWD/libs             \
 
 ​				`mainwindow.cpp`文件
 
-​				`playerInit`函数：选择摄像头，支持`usb`摄像头和`rtsp`等拉流方式
+​				`playerInit`函数：选择视频输入，支持`usb`摄像头、本地视频和`rtsp`等拉流方式
 
 ![1658050317279](figures/1658050317279.png)
 
