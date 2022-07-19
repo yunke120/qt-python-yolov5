@@ -36,12 +36,15 @@ void VideoPlayer::run()
             msleep(10);
         }while(--waitTime);
 
+        waitTime = 500; /* 5s内接收不到视频就退出线程 */
         while (IS_RUN) {               /* 死循环 */
             *pCap >> frame;
             if(frame.empty())
             {
-//                break;
+                waitTime --;
+                if(waitTime == 0) break;
             }
+            else waitTime = 500;
 
             videoMutex.lock();
             videoFrameQueue.enqueue(frame);
