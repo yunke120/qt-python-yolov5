@@ -94,9 +94,23 @@ python detect.py --weights yolov5s.pt --source data/images/bus.jpg
 1. `.pro`文件，宏`USING_DETECT`开启检测，注销后不会启用检测
 
 ```
+/* 可执行文件在这里，将算法和.dll放在这个bin文件夹下 */
+DESTDIR     =  $$PWD/bin 
+
+/* LOGS目录为生成的中间文件，有时候代码出了莫名的错误可将此文件夹删除，再重新生成，说不定就解决了 */
+OBJECTS_DIR =  $$PWD/LOGS/temp/obj
+MOC_DIR     =  $$PWD/LOGS/temp/moc
+UI_DIR      =  $$PWD/LOGS/temp/ui
+RCC_DIR     =  $$PWD/LOGS/temp/rcc
+
+/* 这个宏定义USING_DETECT是开启算法检测的，如果注销后就只有视频播放 */
 DEFINES += USING_DETECT
+
+/* 头文件路径 */
 INCLUDEPATH += $$PWD/inc
 INCLUDEPATH += $$PWD/inc/python
+
+/* 相关静态链接库 */
 LIBS += -L$$PWD/libs             \
               -lopencv_world452 \
               -lpython3         \
