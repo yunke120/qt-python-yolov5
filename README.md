@@ -2,12 +2,12 @@
 
 ## 目录
 
-1. [仓库更新 Top News](https://gitee.com/yunke120/substation-robot/tree/master/#top-news)
-2. [所需环境 Environment](https://gitee.com/yunke120/substation-robot/tree/master/#%E6%89%80%E9%9C%80%E7%8E%AF%E5%A2%83)
-3. [文件下载 Download](https://gitee.com/yunke120/substation-robot/tree/master/#%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD)
-4. [使用方式 How2use](https://gitee.com/yunke120/substation-robot/tree/master/#%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F)
-5. [演示视频 Demo Video](https://gitee.com/yunke120/substation-robot/tree/master/#%E6%BC%94%E7%A4%BA%E8%A7%86%E9%A2%91)
-6. [参考资料 Reference](https://gitee.com/yunke120/substation-robot/tree/master/#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99)
+1. [仓库更新 Top News](https://gitee.com/yunke120/qt-python-yolov5#top-news)
+2. [所需环境 Environment](https://gitee.com/yunke120/qt-python-yolov5#%E6%89%80%E9%9C%80%E7%8E%AF%E5%A2%83)
+3. [文件下载 Download](https://gitee.com/yunke120/qt-python-yolov5#%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD)
+4. [使用方式 How2use](https://gitee.com/yunke120/qt-python-yolov5#%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F)
+5. [演示视频 Demo Video](https://gitee.com/yunke120/qt-python-yolov5#%E6%BC%94%E7%A4%BA%E8%A7%86%E9%A2%91)
+6. [参考资料 Reference](https://gitee.com/yunke120/qt-python-yolov5#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99)
 
 ## Top News
 
