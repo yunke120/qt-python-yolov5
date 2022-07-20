@@ -48,10 +48,11 @@ void MainWindow::playerInit()
 #endif
 //    pPlayer = new VideoPlayer("rtsp://192.168.144.25:8554/main.264"); /* 打开rtsp流 rtsp://192.168.2.119/554*/
 //    pPlayer = new VideoPlayer("rtsp://192.168.144.119/554");
-//    pPlayer = new VideoPlayer(0); /* 打开usb摄像头 */
-    pPlayer = new VideoPlayer("./video.flv"); /* 打开本地视频 */
+    pPlayer = new VideoPlayer(0); /* 打开usb摄像头 */
+//    pPlayer = new VideoPlayer("./video.flv"); /* 打开本地视频 */
     pVideoTimer = new QTimer(this);
     connect(pVideoTimer, &QTimer::timeout, this, &MainWindow::slotVideoTimerOut);
+    connect(pPlayer, &VideoPlayer::sigResetThread, this, &MainWindow::slotResetThread);
 }
 
 void MainWindow::playerDeinit()
@@ -190,4 +191,9 @@ void MainWindow::slotBtnOpenVideo()
         this->stopPlayer();
         ui->btnOpenVideo->setText("打开视频");
     }
+}
+
+void MainWindow::slotResetThread()
+{
+    slotBtnOpenVideo();
 }

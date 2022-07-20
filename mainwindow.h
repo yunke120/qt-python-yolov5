@@ -53,6 +53,9 @@ private slots:
     void slotVideoTimerOut(void);    /* 显示视频定时器 超时中断函数 */
     void slotBtnOpenVideo(void);     /* 打开视频按钮槽函数   */
 
+public slots:
+    void slotResetThread(void);
+
 
 private:
     Ui::MainWindow *ui;

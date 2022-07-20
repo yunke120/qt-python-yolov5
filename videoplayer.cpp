@@ -36,20 +36,28 @@ void VideoPlayer::run()
             msleep(10);
         }while(--waitTime);
 
-        waitTime = 500; /* 5s内接收不到视频就退出线程 */
+        waitTime = 3; /* 5s内接收不到视频就退出线程 */
         while (IS_RUN) {               /* 死循环 */
-            *pCap >> frame;
+            *pCap >> frame;            /* 如果frame为空 ，这个地方opencv应该做了尝试读取，时间大概是1至2秒，这里只尝试3次*/
             if(frame.empty())
             {
                 waitTime --;
-                if(waitTime == 0) break;
+                qDebug() << waitTime;
+                if(waitTime == 0)
+                    break;
+                continue;
             }
-            else waitTime = 500;
+            else waitTime = 3;
 
             videoMutex.lock();
             videoFrameQueue.enqueue(frame);
             videoMutex.unlock();
             msleep(10);
+        }
+
+        if(waitTime == 0)
+        {
+            emit sigResetThread();
         }
         IS_RUN = false;
         pCap->release();

@@ -52,7 +52,7 @@ private:
 
 
 signals:
-    void sigSendErrorCode(int); /* 发送错误码 */
+    void sigResetThread(void);
 
 protected:
     virtual void run() Q_DECL_OVERRIDE;
