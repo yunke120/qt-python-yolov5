@@ -22,7 +22,7 @@ RCC_DIR     =  $$PWD/LOGS/temp/rcc
 INCLUDEPATH += $$PWD/inc
 INCLUDEPATH += $$PWD/inc/python
 LIBS += -L$$PWD/libs             \
-              -lopencv_world452 \
+              -llibopencv_world452 \
               -lpython3         \
               -lpython38
 

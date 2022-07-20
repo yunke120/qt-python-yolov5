@@ -19,7 +19,7 @@
 1. 本机环境
    - QT 5.13.0
    - Python 3.8.10
-   - VS2017 x64
+   - MinGW x64
    - cuda 11.4
    - opencv 4.5.2
 2. 所需环境
@@ -29,7 +29,7 @@
 ## 文件下载
 
 ```
-git clone https://gitee.com/yunke120/qt-python-yolov5.git
+git clone https://gitee.com/yunke120/qt-python-yolov5.git -b mingw
 ```
 
 ## 使用方式
@@ -142,7 +142,7 @@ LIBS += -L$$PWD/libs             \
 
    ​		你需要将自己的算法封装为`temp.py`示例。
 
-4.  `opencv`库需要自行编译，本文所用版本为`opencv 4.5.2`，编译器为`VS2017`，操作系统为`Window10 64Bit`，你需要根据自己的环境编译`opencv`[版本库](https://github.com/opencv/opencv/releases)和`opencv_contrib`[版本库](https://github.com/opencv/opencv_contrib)，编译时需勾选`cuda`。最后替换文件夹中对应的文件即可。
+4.  `opencv`库需要自行编译，本文所用版本为`opencv 4.5.2`，编译器为`mingw`，操作系统为`Window10 64Bit`，你需要根据自己的环境编译`opencv`[版本库](https://github.com/opencv/opencv/releases)和`opencv_contrib`[版本库](https://github.com/opencv/opencv_contrib)。最后替换文件夹中对应的文件即可。
 
 ### 问题解决
 
