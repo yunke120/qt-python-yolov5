@@ -58,7 +58,7 @@ git clone https://gitee.com/yunke120/qt-python-yolov5.git -b mingw
 ```
 /bin文件结构：
 ├── opencv_videoio_ffmpeg452_64.dll /* 所需动态库 */
-├── opencv_world452.dll
+├── libopencv_world452.dll
 ├── openh264-1.8.0-win64.dll
 ├── python38.dll
 ├── python3.dll
@@ -113,7 +113,7 @@ INCLUDEPATH += $$PWD/inc/python
 
 /* 相关静态链接库 */
 LIBS += -L$$PWD/libs             \
-              -lopencv_world452 \
+              -llibopencv_world452 \
               -lpython3         \
               -lpython38
 ```
