@@ -84,7 +84,11 @@ python detect.py --weights yolov5s.pt --source data/images/bus.jpg
 
 ![1658032061632](figures/1658032061632.png)
 
-我所使用的`Python 3.8.10`版本在第一个，打开这个路径`G:\RJAZ\Miniconnda\data`，在里面找到`python3.dll`和`python38.dll`拷贝到`bin`目录下； 打开`.../data/libs`目录，拷贝`python3.lib`和`python38.lib`到`libs`目录下；拷贝`.../data/include`整个文件夹到`inc`目录下，并改名为`python`；拷贝`.../data/Lib/site-packages/numpy/core/include`下的`numpy`文件夹到`inc`目录下；
+我所使用的`Python 3.8.10`版本在第一个，打开这个路径`G:\RJAZ\Miniconnda\data`，在里面找到`python3.dll`和`python38.dll`拷贝到`bin`目录下； 打开`.../data/libs`目录，拷贝`python3.lib`和`python38.lib`到`libs`目录下；拷贝`.../data/include`整个文件夹到`inc`目录下，并改名为`python`；修改其中的`object.h`文件如下（slots关键字冲突了）
+
+![1660390391528](figures/1660390391528.png)
+
+拷贝`.../data/Lib/site-packages/numpy/core/include`下的`numpy`文件夹到`inc`目录下；
 
 ![1658049004407](figures/1658049004407.png)
 
