@@ -42,7 +42,6 @@ void VideoPlayer::run()
             if(frame.empty())
             {
                 waitTime --;
-                qDebug() << waitTime;
                 if(waitTime == 0)
                     break;
                 continue;
