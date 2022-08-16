@@ -46,11 +46,16 @@ void VideoPlayer::run()
                     break;
                 continue;
             }
-            else waitTime = 3;
+            else
+            {
+                waitTime = 3;
 
-            videoMutex.lock();
-            videoFrameQueue.enqueue(frame);
-            videoMutex.unlock();
+                videoMutex.lock();
+                videoFrameQueue.enqueue(frame);
+                videoMutex.unlock();
+            }
+
+
             msleep(10);
         }
 
